@@ -1,11 +1,77 @@
 <dom-module id="shared-styles"><template><style>
-      .page-title {
-        @apply(--paper-font-display2);
-      }
+    body {
+      overflow: hidden;
+      @apply(--layout-fullbleed);
+      @apply(--layout-vertical);
+    }
 
-      @media (max-width: 600px) {
-        .page-title {
-          font-size: 24px!important;
-        }
+    neon-animated-pages {
+      @apply(--layout-flex);
+    }
+    neon-animatable {
+      color: white;
+      @apply(--layout-horizontal);
+      @apply(--layout-center-center);
+    }
+    neon-animatable:nth-child(1) {
+        background: var(--paper-cyan-500);
       }
+    neon-animatable:nth-child(2) {
+      background: var(--paper-blue-500);
+    }
+    neon-animatable:nth-child(3) {
+      background: var(--paper-teal-500);
+    }
+    neon-animatable:nth-child(4) {
+      background: var(--paper-green-500);
+    }
+    neon-animatable:nth-child(5) {
+      background: var(--paper-deep-purple-500);
+    }
+    .app-name {
+      letter-spacing: normal;
+    }
+    neon-animatable:not([style-scope]):not(.style-scope){
+      display:block;
+    }
+    .flex-container {
+      height:100%;
+      @apply(--layout-flex);
+      @apply(--layout-horizontal);
+      justify-content: space-between;
+    }
+    .navigation {
+      display: flex;
+      flex-direction: column;
+      height:100%;
+      width: 3%;
+    }
+    iron-icon {
+      align-self: center;
+      margin: auto 0px;
+    }
+    .mainContent {
+      width: 96%;
+      padding: 16px;
+    }
+    h3 {
+      @apply(--paper-font-display2);
+      margin: 0;
+    }
+    .middle-container {
+      width: 100%;
+    }
+    paper-icon-button {
+      margin-left: 68%;
+    }
+    .mainContent p {
+      @apply(--paper-font-display1);
+    }
+    a {
+      color:#fff;
+    }
+    .middle p {
+      font-size: 24px;
+      margin-left: 20px;
+    }
     </style></template></dom-module>
